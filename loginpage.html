@@ -1,0 +1,45 @@
+<a href="file:///C:/CloudFlixNew/CloudFlix1/creator1.html">Creator Page Access</a>
+
+<form action="loggedin.html" onsubmit="return authenticate()">
+    <label for="username">Username</label>
+    <!-- added IDs to the inputs -->
+    <input
+      id="username"
+      type="text"
+      placeholder="Enter Username"
+      name="username"
+      required
+    />
+    <label for="password">Password</label>
+    <input
+      id="password"
+      type="password"
+      placeholder="Enter Password"
+      name="password"
+      required
+    />
+    <button type="submit">Submit</button>
+  </form>
+  
+  <script>
+  
+  //Following function gets values of the username and password fields and checks to see if they match a hard coded username and password 
+    function authenticate(){
+      var authorised;
+      
+      //get input values
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      
+      //check to see if the password and username match
+      if(username == "abcd" && password == "pass12345"){
+        authorised = true;
+      }else{ // username or password do not match
+        authorised = false;
+        //alert user
+        alert("Sorry, password is incorrect.");
+      }
+      //return result
+      return authorised;
+    }
+  </script>
