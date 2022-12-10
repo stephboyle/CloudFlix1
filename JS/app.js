@@ -118,13 +118,13 @@ $.each( data, function( key, val ) {
 
   items.push( "<hr />");
 
-  items.push("<video src='"+BLOB_ACCOUNT + val["filePath"] +"' width='400' autoplay muted controls> </video>");
+  items.push("<video src='"+BLOB_ACCOUNT + val["filePath"] +"' width='400' autoplay muted controls> </video> <br />");
 
   items.push( "Video title: " + val["Title"] + "<br />");
 
-  items.push( "Producer: " + val["Producer"] + " (Publisher: "+val["Publisher"]+")<br />");
+  items.push( "Producer and Publisher: " + val["Producer"] + ", " + val["Publisher"]+"<br />");
 
-  items.push( "Age: " + val["age"] + "<br />");
+  items.push( "Age Rating: " + val["age"] + "<br />");
 
   items.push( "Genre : " + val["Genre"] + "<br />");
 
